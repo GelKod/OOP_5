@@ -190,11 +190,14 @@ public class VehicleUtils {
 
     public static Vehicle createVehicle(String mark, int num, Vehicle a) throws Exception{
         Class<?> newClass = a.getClass();
-        Constructor<?> tmp = newClass.getConstructor(new Class[]{String.class,int.class});
-        if(tmp!=null){
+        try{
+            Constructor<?> tmp = newClass.getConstructor(new Class[]{String.class,int.class});
             return (Vehicle)tmp.newInstance(new Object[]{mark,num});
         }
-        return null;
+        catch(Exception e){
+            return null;
+        }
+
     }
 
     

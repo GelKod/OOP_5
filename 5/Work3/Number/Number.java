@@ -36,6 +36,8 @@ public class Number {
         // Object temp = newClass.getConstructor(String.class, int.class).newInstance("Nissan", 2);
         // Method tmp = newClass.getMethod(nameMetod, String.class, double.class);
 
+        System.out.println(VehicleUtils.createVehicle("Horror", 3, null).getClass());
+
         //2
         // tmp.invoke(temp, oldName, price);
         // System.out.println(temp);
